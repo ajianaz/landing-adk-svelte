@@ -1,58 +1,137 @@
-# Svelte library
+# IT Services Landing Page
 
-Everything you need to build a Svelte library, powered by [`sv`](https://npmjs.com/package/sv).
+A modern, bilingual (Indonesia & English) landing page for IT consulting services built with SvelteKit.
 
-Read more about creating a library [in the docs](https://svelte.dev/docs/kit/packaging).
+## Features
 
-## Creating a project
+- **Bilingual Support**: Full support for both Indonesian and English languages
+- **Light/Dark Theme**: Toggle between light and dark themes
+- **Responsive Design**: Works on all device sizes
+- **Interactive Components**: Animated UI elements with smooth transitions
+- **Complete Sections**:
+  - Header with navigation and language toggle
+  - Hero section with CTAs
+  - Key services showcase
+  - How we work process visualization
+  - Portfolio with filtering capability
+  - Client testimonials carousel
+  - About section
+  - Contact form with WhatsApp integration
+  - Footer with social links
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Tech Stack
 
-```sh
-# create a new project in the current directory
-npx sv create
+- [SvelteKit](https://kit.svelte.dev/) - Framework
+- [TypeScript](https://www.typescriptlang.org/) - Type safety
+- [Tailwind CSS](https://tailwindcss.com/) - Styling
+- [Vite](https://vitejs.dev/) - Build tool
 
-# create a new project in my-app
-npx sv create my-app
-```
+## Getting Started
 
-## Developing
+### Prerequisites
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+- Node.js (v16 or higher)
+- pnpm (recommended) or npm
 
-```sh
-npm run dev
+### Installation
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+1. Clone the repository:
 
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
+   ```bash
+   git clone <repository-url>
+   cd landing-adk-svelte
+   ```
 
-## Building
+2. Install dependencies:
 
-To build your library:
+   ```bash
+   pnpm install
+   # or
+   npm install
+   ```
 
-```sh
-npm pack
-```
+3. Start the development server:
 
-To create a production version of your showcase app:
+   ```bash
+   pnpm run dev
+   # or
+   npm run dev
+   ```
 
-```sh
+4. Open your browser and navigate to `http://localhost:5173`
+
+### Building for Production
+
+```bash
+pnpm run build
+# or
 npm run build
 ```
 
-You can preview the production build with `npm run preview`.
+### Previewing the Production Build
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
-
-## Publishing
-
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
-
-To publish your library to [npm](https://www.npmjs.com):
-
-```sh
-npm publish
+```bash
+pnpm run preview
+# or
+npm run preview
 ```
+
+## Project Structure
+
+```
+src/
+├── lib/
+│   ├── components/
+│   │   ├── ui/          # Reusable UI components
+│   │   ├── Header.svelte
+│   │   ├── Hero.svelte
+│   │   ├── Services.svelte
+│   │   ├── HowItWorks.svelte
+│   │   ├── Portfolio.svelte
+│   │   ├── Testimonials.svelte
+│   │   ├── About.svelte
+│   │   ├── Contact.svelte
+│   │   └── Footer.svelte
+│   ├── stores.ts        # Global state management
+│   ├── translations.ts  # Bilingual content
+│   └── types.ts         # TypeScript types
+├── routes/
+│   ├── +layout.svelte
+│   └── +page.svelte
+├── app.css              # Global styles
+├── app.d.ts             # TypeScript declarations
+└── app.html             # HTML template
+```
+
+## Customization
+
+### Language Content
+
+All bilingual content is managed in `src/lib/translations.ts`. You can easily add or modify translations in this file.
+
+### Theme Colors
+
+Theme colors are defined in `src/app.css` using CSS variables. Modify these to match your brand colors.
+
+### Adding New Sections
+
+1. Create a new component in `src/lib/components/`
+2. Import and use it in `src/routes/+page.svelte`
+
+## Deployment
+
+This project can be deployed to any platform that supports Node.js or static site hosting:
+
+- Vercel
+- Netlify
+- GitHub Pages
+- Any Node.js hosting platform
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- [SvelteKit Documentation](https://kit.svelte.dev/docs)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
