@@ -3,7 +3,7 @@
 </script>
 
 <button
-	class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
+	class="p-2 rounded-md hover:bg-accent transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary scale-in"
 	on:click={toggleLanguage}
 	aria-label="Toggle language"
 >
@@ -17,9 +17,14 @@
 <style>
 	button {
 		transition: all 0.2s ease-in-out;
+		transform: scale(1);
 	}
 
 	button:hover {
 		transform: scale(1.1);
+	}
+
+	button:active {
+		transform: scale(0.95);
 	}
 </style>

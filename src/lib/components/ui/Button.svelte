@@ -23,13 +23,13 @@
 	} = $props();
 
 	// Base classes
-	let baseClasses = 'inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background';
+	let baseClasses = 'inline-flex items-center justify-center rounded-md font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none scale-in';
 
 	// Variant classes
 	let variantClasses = {
-		primary: 'bg-blue-600 text-white hover:bg-blue-700',
-		secondary: 'bg-gray-200 text-gray-900 hover:bg-gray-300 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600',
-		outline: 'border border-blue-600 text-blue-600 hover:bg-blue-50 dark:hover:bg-gray-800'
+		primary: 'bg-primary text-primary-foreground hover:bg-primary/90 shadow-md hover:shadow-lg',
+		secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary/80',
+		outline: 'border border-input bg-background hover:bg-accent hover:text-accent-foreground'
 	}[variant];
 
 	// Size classes
@@ -76,14 +76,15 @@
 	a, button {
 		transition: all 0.2s ease-in-out;
 		text-decoration: none;
+		transform: scale(1);
 	}
 
 	a:hover, button:hover {
-		transform: translateY(-2px);
+		transform: scale(1.05);
 		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 	}
 
 	a:active, button:active {
-		transform: translateY(0);
+		transform: scale(0.98);
 	}
 </style>

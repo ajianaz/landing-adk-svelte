@@ -2,6 +2,64 @@
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
 
+/* Theme variables */
+:root {
+	/* Light theme colors */
+	--background: #ffffff;
+	--foreground: #333333;
+	--muted: #f5f5f5;
+	--muted-foreground: #737373;
+	--popover: #ffffff;
+	--popover-foreground: #333333;
+	--card: #ffffff;
+	--card-foreground: #333333;
+	--border: #e5e5e5;
+	--input: #e5e5e5;
+	--primary: #2563eb;
+	--primary-foreground: #ffffff;
+	--secondary: #f3f4f6;
+	--secondary-foreground: #333333;
+	--accent: #f3f4f6;
+	--accent-foreground: #333333;
+	--destructive: #ef4444;
+	--destructive-foreground: #ffffff;
+	--ring: #2563eb;
+}
+
+.dark {
+	/* Dark theme colors */
+	--background: #0a0a0a;
+	--foreground: #f5f5f5;
+	--muted: #262626;
+	--muted-foreground: #a3a3a3;
+	--popover: #0a0a0a;
+	--popover-foreground: #f5f5f5;
+	--card: #0a0a0a;
+	--card-foreground: #f5f5f5;
+	--border: #262626;
+	--input: #262626;
+	--primary: #3b82f6;
+	--primary-foreground: #0a0a0a;
+	--secondary: #262626;
+	--secondary-foreground: #f5f5f5;
+	--accent: #262626;
+	--accent-foreground: #f5f5f5;
+	--destructive: #ef4444;
+	--destructive-foreground: #f5f5f5;
+	--ring: #3b82f6;
+}
+
+/* Base styles */
+@layer base {
+	body {
+		background-color: var(--background);
+		color: var(--foreground);
+		transition:
+			background-color 0.3s ease,
+			color 0.3s ease;
+	}
+}
+
 /* Smooth scrolling */
 html {
 	scroll-behavior: smooth;
@@ -21,6 +79,34 @@ html {
 
 .fade-in {
 	animation: fadeIn 0.6s ease-out;
+}
+
+.delay-100 {
+	animation-delay: 0.1s;
+}
+
+.delay-200 {
+	animation-delay: 0.2s;
+}
+
+.delay-300 {
+	animation-delay: 0.3s;
+}
+
+.delay-400 {
+	animation-delay: 0.4s;
+}
+
+.delay-500 {
+	animation-delay: 0.5s;
+}
+
+.delay-600 {
+	animation-delay: 0.6s;
+}
+
+.delay-700 {
+	animation-delay: 0.7s;
 }
 
 @keyframes slideInLeft {
@@ -53,9 +139,65 @@ html {
 	animation: slideInRight 0.6s ease-out;
 }
 
+@keyframes scaleIn {
+	from {
+		opacity: 0;
+		transform: scale(0.95);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.scale-in {
+	animation: scaleIn 0.3s ease-out;
+}
+
+@keyframes pulseSlow {
+	0%,
+	100% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.5;
+	}
+}
+
+.pulse-slow {
+	animation: pulseSlow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Theme transition */
+* {
+	transition:
+		background-color 0.3s ease,
+		border-color 0.3s ease,
+		color 0.3s ease;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
 	.container {
 		@apply px-4;
 	}
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--muted);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--primary);
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--primary) / 80%;
 }

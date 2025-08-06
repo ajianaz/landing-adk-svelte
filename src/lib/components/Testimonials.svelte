@@ -48,13 +48,13 @@
 	}
 </script>
 
-<section id="testimonials" class="py-20 bg-gray-50 dark:bg-gray-800">
+<section id="testimonials" class="py-20 bg-muted">
 	<div class="container px-4 md:px-6">
 		<div class="text-center mb-16">
-			<h2 class="text-3xl md:text-4xl font-bold mb-4">
+			<h2 class="text-3xl md:text-4xl font-bold mb-4 text-foreground">
 				{$language === 'id' ? t('testimonials.title', 'id') : t('testimonials.title', 'en')}
 			</h2>
-			<div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+			<div class="w-20 h-1 bg-primary mx-auto"></div>
 		</div>
 
 		<div class="max-w-4xl mx-auto">
@@ -76,25 +76,25 @@
 						{/each}
 					</div>
 
-					<blockquote class="text-xl md:text-2xl font-medium mb-6">
+					<blockquote class="text-xl md:text-2xl font-medium mb-6 text-foreground">
 						"{testimonials[currentTestimonial].content}"
 					</blockquote>
 
-					<div class="font-semibold text-lg">
+					<div class="font-semibold text-lg text-foreground">
 						{testimonials[currentTestimonial].name}
 					</div>
-					<div class="text-gray-600 dark:text-gray-300">
+					<div class="text-foreground/80">
 						{testimonials[currentTestimonial].company}
 					</div>
 				</Card>
 
 				<div class="flex justify-center mt-8 space-x-4">
 					<button
-						class="p-2 rounded-full bg-white dark:bg-gray-700 shadow-md hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors"
+						class="p-2 rounded-full bg-card shadow-md hover:bg-accent transition-colors border border-border"
 						onclick={prevTestimonial}
 						aria-label="Previous testimonial"
 					>
-						<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<svg class="w-6 h-6 text-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
 						</svg>
 					</button>
@@ -104,8 +104,8 @@
 							<button
 								class={`w-3 h-3 mx-1 rounded-full ${
 									index === currentTestimonial
-										? 'bg-blue-600'
-										: 'bg-gray-300 dark:bg-gray-600'
+										? 'bg-primary'
+										: 'bg-muted-foreground/20'
 								}`}
 								onclick={() => currentTestimonial = index}
 								aria-label={`View testimonial ${index + 1}`}
@@ -114,11 +114,11 @@
 					</div>
 
 					<button
-						class="p-2 rounded-full bg-white dark:bg-gray-700 shadow-md hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors"
+						class="p-2 rounded-full bg-card shadow-md hover:bg-accent transition-colors border border-border"
 						onclick={nextTestimonial}
 						aria-label="Next testimonial"
 					>
-						<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<svg class="w-6 h-6 text-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
 						</svg>
 					</button>

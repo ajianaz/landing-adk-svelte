@@ -56,13 +56,13 @@
 	);
 </script>
 
-<section id="portfolio" class="py-20 bg-white dark:bg-gray-900">
+<section id="portfolio" class="py-20 bg-background">
 	<div class="container px-4 md:px-6">
 		<div class="text-center mb-16">
-			<h2 class="text-3xl md:text-4xl font-bold mb-4">
+			<h2 class="text-3xl md:text-4xl font-bold mb-4 text-foreground">
 				{$language === 'id' ? t('portfolio.title', 'id') : t('portfolio.title', 'en')}
 			</h2>
-			<div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+			<div class="w-20 h-1 bg-primary mx-auto"></div>
 		</div>
 
 		<!-- Category filters -->
@@ -71,8 +71,8 @@
 				<button
 					class={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
 						filter === category
-							? 'bg-blue-600 text-white'
-							: 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600'
+							? 'bg-primary text-primary-foreground'
+							: 'bg-muted text-foreground/80 hover:bg-accent hover:text-accent-foreground'
 					}`}
 					onclick={() => filter = category}
 				>
@@ -87,11 +87,11 @@
 				<Card class="overflow-hidden">
 					<img src={project.image} alt={project.title} class="w-full h-48 object-cover" />
 					<div class="p-6">
-						<span class="inline-block px-3 py-1 text-xs font-semibold text-blue-600 bg-blue-100 rounded-full mb-3">
+						<span class="inline-block px-3 py-1 text-xs font-semibold text-primary-foreground bg-primary rounded-full mb-3">
 							{project.category}
 						</span>
-						<h3 class="text-xl font-semibold mb-2">{project.title}</h3>
-						<p class="text-gray-600 dark:text-gray-300">{project.description}</p>
+						<h3 class="text-xl font-semibold mb-2 text-foreground">{project.title}</h3>
+						<p class="text-foreground/80">{project.description}</p>
 					</div>
 				</Card>
 			{/each}

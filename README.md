@@ -5,7 +5,7 @@ A modern, bilingual (Indonesia & English) landing page for IT consulting service
 ## Features
 
 - **Bilingual Support**: Full support for both Indonesian and English languages
-- **Light/Dark Theme**: Toggle between light and dark themes
+- **Light/Dark Theme**: Toggle between light and dark themes with system preference detection
 - **Responsive Design**: Works on all device sizes
 - **Interactive Components**: Animated UI elements with smooth transitions
 - **Complete Sections**:
@@ -18,6 +18,35 @@ A modern, bilingual (Indonesia & English) landing page for IT consulting service
   - About section
   - Contact form with WhatsApp integration
   - Footer with social links
+
+## Recent UI/UX Improvements
+
+### Theme Switching Fixes
+
+- Proper theme initialization on page load
+- Consistent color scheme using CSS variables
+- Smooth transitions between themes
+- Improved contrast ratios for accessibility
+
+### Bilingual Support Enhancements
+
+- Verified language toggle functionality
+- All content translated to both languages
+- Language preference stored in localStorage
+
+### Color Refinement
+
+- Comprehensive color palette using CSS variables
+- Improved contrast ratios for better accessibility
+- Visual harmony across all components
+- Proper dark mode implementation
+
+### Smooth Animations
+
+- Fade-in animations with staggered delays
+- Scale and hover effects for interactive elements
+- Smooth transitions for all UI changes
+- Performance-optimized animations
 
 ## Tech Stack
 

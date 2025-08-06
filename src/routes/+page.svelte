@@ -11,14 +11,30 @@
 </script>
 
 <Header />
-<Hero />
-<Services />
-<HowItWorks />
-<Portfolio />
-<Testimonials />
-<About />
-<Contact />
-<Footer />
+<div class="fade-in">
+	<Hero />
+</div>
+<div class="fade-in delay-100">
+	<Services />
+</div>
+<div class="fade-in delay-200">
+	<HowItWorks />
+</div>
+<div class="fade-in delay-300">
+	<Portfolio />
+</div>
+<div class="fade-in delay-400">
+	<Testimonials />
+</div>
+<div class="fade-in delay-500">
+	<About />
+</div>
+<div class="fade-in delay-600">
+	<Contact />
+</div>
+<div class="fade-in delay-700">
+	<Footer />
+</div>
 
 <style>
 	/* Add any page-specific styles here */
