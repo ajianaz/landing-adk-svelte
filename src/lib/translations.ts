@@ -1,4 +1,4 @@
-import type { Language } from './types.js';
+import type { Language } from './types.ts';
 
 // Define the structure of our translations
 interface Translations {
@@ -206,8 +206,8 @@ const translations: Translations = {
 		privacy: { id: 'Privasi', en: 'Privacy' },
 		contact: { id: 'Kontak', en: 'Contact' },
 		copyright: {
-			id: '© 2023 Nama Perusahaan. Hak Cipta Dilindungi.',
-			en: '© 2023 Company Name. All Rights Reserved.'
+			id: '© 2023 Azfirazka Digital Kreatif. Hak Cipta Dilindungi.',
+			en: '© 2023 Azfirazka Digital Kreatif. All Rights Reserved.'
 		}
 	}
 };

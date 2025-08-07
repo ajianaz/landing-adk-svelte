@@ -32,24 +32,24 @@
 	]);
 </script>
 
-<section id="how-it-works" class="py-20 bg-muted">
+<section id="how-it-works" class="py-20 bg-gradient-to-br from-teal-50 to-purple-50">
 	<div class="container px-4 md:px-6">
 		<div class="text-center mb-16">
 			<h2 class="text-3xl md:text-4xl font-bold mb-4 text-foreground">
 				{$language === 'id' ? t('howItWorks.title', 'id') : t('howItWorks.title', 'en')}
 			</h2>
-			<div class="w-20 h-1 bg-primary mx-auto"></div>
+			<div class="w-20 h-1 bg-gradient-to-r from-teal-500 to-purple-500 mx-auto"></div>
 		</div>
 
 		<div class="relative">
 			<!-- Progress line -->
-			<div class="absolute left-1/2 top-12 transform -translate-x-1/2 h-[calc(100%-3rem)] w-1 bg-primary/20 hidden md:block"></div>
+			<div class="absolute left-1/2 top-12 transform -translate-x-1/2 h-[calc(100%-3rem)] w-1 bg-gradient-to-b from-teal-400 to-purple-400 hidden md:block"></div>
 
 			<div class="grid grid-cols-1 md:grid-cols-5 gap-8">
 				{#each steps as step}
-					<div class="relative flex flex-col items-center text-center md:text-left md:flex-row md:space-x-4 md:space-y-0">
+					<div class="relative flex flex-col items-center text-center md:text-left md:flex-row md:space-x-4 md:space-y-0 group">
 						<!-- Step number circle -->
-						<div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold z-10">
+						<div class="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-teal-500 text-white flex items-center justify-center font-bold z-10 transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg">
 							{step.icon}
 						</div>
 

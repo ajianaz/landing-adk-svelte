@@ -23,11 +23,11 @@
 	} = $props();
 
 	// Base classes
-	let baseClasses = 'inline-flex items-center justify-center rounded-md font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none scale-in';
+	let baseClasses = 'inline-flex items-center justify-center rounded-md font-medium transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none scale-in hover:scale-105';
 
 	// Variant classes
 	let variantClasses = {
-		primary: 'bg-primary text-primary-foreground hover:bg-primary/90 shadow-md hover:shadow-lg',
+		primary: 'bg-gradient-to-r from-purple-500 to-teal-500 text-white hover:from-purple-600 hover:to-teal-600 shadow-md hover:shadow-lg',
 		secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary/80',
 		outline: 'border border-input bg-background hover:bg-accent hover:text-accent-foreground'
 	}[variant];

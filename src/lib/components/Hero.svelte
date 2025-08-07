@@ -4,10 +4,10 @@
 	import Button from './ui/Button.svelte';
 </script>
 
-<section class="relative overflow-hidden bg-gradient-to-r from-primary/5 to-accent py-20 md:py-28">
+<section class="relative overflow-hidden bg-gradient-to-r from-purple-50 to-teal-50 py-20 md:py-28">
 	<div class="container px-4 md:px-6 relative z-10">
 		<div class="flex flex-col items-center text-center space-y-6">
-			<h1 class="text-4xl md:text-6xl font-bold tracking-tight text-foreground">
+			<h1 class="text-4xl md:text-6xl font-bold tracking-tight text-foreground bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-teal-600">
 				{$language === 'id' ? t('hero.headline', 'id') : t('hero.headline', 'en')}
 			</h1>
 
@@ -28,9 +28,9 @@
 
 	<!-- Animated background elements -->
 	<div class="absolute top-0 left-0 w-full h-full overflow-hidden">
-		<div class="absolute top-20 left-10 w-32 h-32 rounded-full bg-primary/10 blur-3xl animate-pulse"></div>
-		<div class="absolute bottom-20 right-10 w-48 h-48 rounded-full bg-accent/20 blur-3xl animate-pulse"></div>
-		<div class="absolute top-1/2 left-1/4 w-24 h-24 rounded-full bg-primary/5 blur-3xl animate-pulse"></div>
+		<div class="absolute top-20 left-10 w-32 h-32 rounded-full bg-purple-200 blur-3xl animate-pulse"></div>
+		<div class="absolute bottom-20 right-10 w-48 h-48 rounded-full bg-teal-200 blur-3xl animate-pulse"></div>
+		<div class="absolute top-1/2 left-1/4 w-24 h-24 rounded-full bg-pink-200 blur-3xl animate-pulse"></div>
 	</div>
 </section>
 

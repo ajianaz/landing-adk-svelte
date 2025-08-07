@@ -48,23 +48,23 @@
 	}
 </script>
 
-<section id="testimonials" class="py-20 bg-muted">
+<section id="testimonials" class="py-20 bg-gradient-to-br from-teal-50 to-purple-50">
 	<div class="container px-4 md:px-6">
 		<div class="text-center mb-16">
 			<h2 class="text-3xl md:text-4xl font-bold mb-4 text-foreground">
 				{$language === 'id' ? t('testimonials.title', 'id') : t('testimonials.title', 'en')}
 			</h2>
-			<div class="w-20 h-1 bg-primary mx-auto"></div>
+			<div class="w-20 h-1 bg-gradient-to-r from-teal-500 to-purple-500 mx-auto"></div>
 		</div>
 
 		<div class="max-w-4xl mx-auto">
 			{#if testimonials.length > 0}
-				<Card class="p-8 md:p-12 text-center">
+				<Card class="p-8 md:p-12 text-center hover:shadow-xl transition-all duration-300">
 					<div class="flex justify-center mb-6">
 						<img
 							src={testimonials[currentTestimonial].avatar}
 							alt={testimonials[currentTestimonial].name}
-							class="w-20 h-20 rounded-full object-cover"
+							class="w-20 h-20 rounded-full object-cover border-4 border-purple-200"
 						/>
 					</div>
 
@@ -90,11 +90,11 @@
 
 				<div class="flex justify-center mt-8 space-x-4">
 					<button
-						class="p-2 rounded-full bg-card shadow-md hover:bg-accent transition-colors border border-border"
+						class="p-2 rounded-full bg-white shadow-md hover:bg-purple-100 transition-all duration-300 border border-purple-200 hover:scale-110"
 						onclick={prevTestimonial}
 						aria-label="Previous testimonial"
 					>
-						<svg class="w-6 h-6 text-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
 						</svg>
 					</button>
@@ -102,10 +102,10 @@
 					<div class="flex items-center">
 						{#each testimonials as _, index}
 							<button
-								class={`w-3 h-3 mx-1 rounded-full ${
+								class={`w-3 h-3 mx-1 rounded-full transition-all duration-300 ${
 									index === currentTestimonial
-										? 'bg-primary'
-										: 'bg-muted-foreground/20'
+										? 'bg-gradient-to-r from-purple-500 to-teal-500 scale-125'
+										: 'bg-purple-200'
 								}`}
 								onclick={() => currentTestimonial = index}
 								aria-label={`View testimonial ${index + 1}`}
@@ -114,11 +114,11 @@
 					</div>
 
 					<button
-						class="p-2 rounded-full bg-card shadow-md hover:bg-accent transition-colors border border-border"
+						class="p-2 rounded-full bg-white shadow-md hover:bg-purple-100 transition-all duration-300 border border-purple-200 hover:scale-110"
 						onclick={nextTestimonial}
 						aria-label="Next testimonial"
 					>
-						<svg class="w-6 h-6 text-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
 						</svg>
 					</button>

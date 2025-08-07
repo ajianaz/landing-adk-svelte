@@ -16,36 +16,10 @@ function createLocalStorageStore<T>(key: string, defaultValue: T) {
 	return store;
 }
 
-// Language store - defaults to Indonesian
-export const language = createLocalStorageStore<'id' | 'en'>('language', 'id');
-
-// Theme store - defaults to system preference or light
-export const theme = createLocalStorageStore<'light' | 'dark'>('theme', 'light');
+// Language store - defaults to English
+export const language = createLocalStorageStore<'id' | 'en'>('language', 'en');
 
 // Toggle language between Indonesian and English
 export function toggleLanguage() {
 	language.update(current => current === 'id' ? 'en' : 'id');
-}
-
-// Toggle theme between light and dark
-export function toggleTheme() {
-	theme.update(current => current === 'light' ? 'dark' : 'light');
-}
-
-// Set theme class on html element
-if (browser) {
-	// Initialize theme on client side
-	const storedTheme = localStorage.getItem('theme');
-	const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-	const initialTheme = storedTheme || (systemPrefersDark ? 'dark' : 'light');
-
-	// Set initial theme class
-	document.documentElement.classList.remove('light', 'dark');
-	document.documentElement.classList.add(initialTheme);
-
-	// Subscribe to theme changes
-	theme.subscribe(current => {
-		document.documentElement.classList.remove('light', 'dark');
-		document.documentElement.classList.add(current);
-	});
 }

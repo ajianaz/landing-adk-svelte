@@ -2,51 +2,62 @@
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
 
-/* Theme variables */
+/* Theme variables - Modern purple theme */
 :root {
-	/* Light theme colors */
+	/* Primary colors */
 	--background: #ffffff;
 	--foreground: #333333;
-	--muted: #f5f5f5;
-	--muted-foreground: #737373;
+	--muted: #f8f9fa;
+	--muted-foreground: #6c757d;
 	--popover: #ffffff;
 	--popover-foreground: #333333;
 	--card: #ffffff;
 	--card-foreground: #333333;
-	--border: #e5e5e5;
-	--input: #e5e5e5;
-	--primary: #2563eb;
+	--border: #e9ecef;
+	--input: #e9ecef;
+	--primary: #6f42c1;
 	--primary-foreground: #ffffff;
-	--secondary: #f3f4f6;
+	--secondary: #f8f9fa;
 	--secondary-foreground: #333333;
-	--accent: #f3f4f6;
+	--accent: #e9ecef;
 	--accent-foreground: #333333;
-	--destructive: #ef4444;
+	--destructive: #dc3545;
 	--destructive-foreground: #ffffff;
-	--ring: #2563eb;
-}
+	--ring: #6f42c1;
 
-.dark {
-	/* Dark theme colors */
-	--background: #0a0a0a;
-	--foreground: #f5f5f5;
-	--muted: #262626;
-	--muted-foreground: #a3a3a3;
-	--popover: #0a0a0a;
-	--popover-foreground: #f5f5f5;
-	--card: #0a0a0a;
-	--card-foreground: #f5f5f5;
-	--border: #262626;
-	--input: #262626;
-	--primary: #3b82f6;
-	--primary-foreground: #0a0a0a;
-	--secondary: #262626;
-	--secondary-foreground: #f5f5f5;
-	--accent: #262626;
-	--accent-foreground: #f5f5f5;
-	--destructive: #ef4444;
-	--destructive-foreground: #f5f5f5;
-	--ring: #3b82f6;
+	/* Additional vibrant colors for more visual interest */
+	--purple-50: #f3e8ff;
+	--purple-100: #e9d5ff;
+	--purple-200: #d8b4fe;
+	--purple-300: #c084fc;
+	--purple-400: #a855f7;
+	--purple-500: #9333ea;
+	--purple-600: #7e22ce;
+	--purple-700: #6b21a8;
+	--purple-800: #581c87;
+	--purple-900: #4c1d95;
+
+	--teal-50: #f0fdf9;
+	--teal-100: #ccfbf1;
+	--teal-200: #99f6e4;
+	--teal-300: #5eead4;
+	--teal-400: #2dd4bf;
+	--teal-500: #0d9488;
+	--teal-600: #0f766e;
+	--teal-700: #115e59;
+	--teal-800: #134e4a;
+	--teal-900: #042f2e;
+
+	--pink-50: #fdf2f8;
+	--pink-100: #fce7f3;
+	--pink-200: #fbcfe8;
+	--pink-300: #f9a8d4;
+	--pink-400: #f472b6;
+	--pink-500: #ec4899;
+	--pink-600: #db2777;
+	--pink-700: #be185d;
+	--pink-800: #9d174d;
+	--pink-900: #831843;
 }
 
 /* Base styles */
@@ -54,9 +65,6 @@
 	body {
 		background-color: var(--background);
 		color: var(--foreground);
-		transition:
-			background-color 0.3s ease,
-			color 0.3s ease;
 	}
 }
 
@@ -166,14 +174,6 @@ html {
 
 .pulse-slow {
 	animation: pulseSlow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-
-/* Theme transition */
-* {
-	transition:
-		background-color 0.3s ease,
-		border-color 0.3s ease,
-		color 0.3s ease;
 }
 
 /* Responsive adjustments */

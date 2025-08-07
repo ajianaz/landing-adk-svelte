@@ -56,23 +56,23 @@
 	);
 </script>
 
-<section id="portfolio" class="py-20 bg-background">
+<section id="portfolio" class="py-20 bg-gradient-to-br from-purple-50 to-pink-50">
 	<div class="container px-4 md:px-6">
 		<div class="text-center mb-16">
 			<h2 class="text-3xl md:text-4xl font-bold mb-4 text-foreground">
 				{$language === 'id' ? t('portfolio.title', 'id') : t('portfolio.title', 'en')}
 			</h2>
-			<div class="w-20 h-1 bg-primary mx-auto"></div>
+			<div class="w-20 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto"></div>
 		</div>
 
 		<!-- Category filters -->
 		<div class="flex flex-wrap justify-center gap-2 mb-12">
 			{#each categories as category}
 				<button
-					class={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+					class={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 transform hover:scale-105 ${
 						filter === category
-							? 'bg-primary text-primary-foreground'
-							: 'bg-muted text-foreground/80 hover:bg-accent hover:text-accent-foreground'
+							? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-md'
+							: 'bg-white text-foreground/80 hover:bg-purple-100 hover:text-purple-700 shadow-sm'
 					}`}
 					onclick={() => filter = category}
 				>
@@ -84,10 +84,10 @@
 		<!-- Projects grid -->
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 			{#each filteredProjects as project}
-				<Card class="overflow-hidden">
+				<Card class="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
 					<img src={project.image} alt={project.title} class="w-full h-48 object-cover" />
 					<div class="p-6">
-						<span class="inline-block px-3 py-1 text-xs font-semibold text-primary-foreground bg-primary rounded-full mb-3">
+						<span class="inline-block px-3 py-1 text-xs font-semibold text-white bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-3">
 							{project.category}
 						</span>
 						<h3 class="text-xl font-semibold mb-2 text-foreground">{project.title}</h3>
