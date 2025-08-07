@@ -58,7 +58,7 @@
 			<LanguageToggle />
 
 			<!-- Desktop CTA Button -->
-						<Button variant="primary" size="sm" class="hidden md:inline-flex" on:click={handleWhatsAppClick}>
+						<Button variant="primary" size="sm" class="hidden md:inline-flex" onclick={handleWhatsAppClick}>
 							{$language === 'id' ? t('hero.freeConsultation', 'id') : t('hero.freeConsultation', 'en')}
 						</Button>
 
@@ -129,23 +129,12 @@
 						{$language === 'id' ? t('nav.about', 'id') : t('nav.about', 'en')}
 					</a>
 					<a
-						href="#contact"
-						class="text-foreground/80 hover:text-purple-600 py-2 text-sm font-medium transition-all duration-300 hover:scale-105"
-						onclick={() => (mobileMenuOpen = false)}
-					>
-						{$language === 'id' ? t('nav.consultation', 'id') : t('nav.consultation', 'en')}
-					</a>
-					<Button
-											variant="primary"
-											size="sm"
-											class="mt-2 w-full bg-gradient-to-r from-purple-500 to-teal-500 hover:from-purple-600 hover:to-teal-600"
-											onclick={() => {
-												mobileMenuOpen = false;
-												handleWhatsAppClick();
-											}}
+											href="#contact"
+											class="text-foreground/80 hover:text-purple-600 py-2 text-sm font-medium transition-all duration-300 hover:scale-105"
+											onclick={() => (mobileMenuOpen = false)}
 										>
-											{$language === 'id' ? t('hero.freeConsultation', 'id') : t('hero.freeConsultation', 'en')}
-										</Button>
+											{$language === 'id' ? t('nav.consultation', 'id') : t('nav.consultation', 'en')}
+										</a>
 				</div>
 			</div>
 		{/if}
